@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+            - image: circleci/python:3.6.4
+      
+    working_directory: ~/repo
+
+    steps:
+            - checkout
+            - run: pip install pytest
+            - run: pytest
+
+
+
+
